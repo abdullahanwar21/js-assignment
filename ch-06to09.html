@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-06 to 09</title>
+</head>
+
+<body>
+
+    <script>
+        //  Q 1
+
+
+        let a = 10;
+        document.write("Result  : </br>");
+        document.write(`The Value of a is :  ${a} </br>`)
+        document.write(".............................................. </br>");
+        ++a;
+        document.write(`The Value of ++a is  : ${a} </br>`)
+        document.write(`Now The Value of a is  : ${a} </br> </br>`)
+        document.write(`The Value of a++ is :  ${a} </br>`)
+        a++;
+        document.write(`Now The Value of a is  : ${a} </br> </br>`)
+        --a;
+        document.write(`The Value of --a is :  ${a} </br>`)
+        document.write(`Now The Value of a is :  ${a} </br> </br>`)
+        document.write(`The Value of a-- is :  ${a} </br>`)
+        a--;
+        document.write(`Now The Value of a is  :  ${a} </br> </br>`)
+
+        //  Q-2
+        let x = 2, y = 1;
+        let res_ult = --x - --y + ++y + y--;
+        --x;
+        --x - --y;
+        --x - --y + ++y;
+        --x - --y + ++y + y--;
+        document.write(`x is ${x} </br>`);
+        document.write(`y is ${y} </br>`);
+        document.write(`res_ult is ${res_ult} </br>`);
+        //  Q-3
+        let user = prompt("ENter Your Name ");
+        document.write(`<h2>Welcome To our Website Dear ${user} </h2>`);
+
+        //  Q-3
+        let userNum = +prompt("Enter A Number for Table ");
+        for (i = 1; i <= 10; i++) {
+            let number = userNum || 5;
+            let result = number * i;
+            document.write(`<h2> ${i} X  ${number} = ${result} </h2>`);
+        }
+
+        //  Q-4 
+        let subjectOne = prompt("Enter Your First Subject ");
+        let subjectSecond = prompt("Enter Your Second Subject ");
+        let subjectThird = prompt("Enter Your Third Subject ");
+
+        let marks = 100 ;
+        let totalMarks = marks + marks +marks ;
+
+        let obtSubjectOne = +prompt(`Enter Your Obtained Marks of ${subjectOne}`);
+        let obtSubjectSecond = +prompt(`Enter Your Obtained Marks of ${subjectSecond}`);
+        let obtSubjectThird = +prompt(`Enter Your Obtained Marks of ${subjectThird}`);
+        let totalObtMarks = obtSubjectOne + obtSubjectSecond + obtSubjectThird;
+        let percentage1 = (obtSubjectOne / marks) * 100;
+        let percentage2 = (obtSubjectSecond / marks) * 100;
+        let percentage3 = (obtSubjectThird / marks) * 100;
+        let obtPercentage = percentage1 + percentage2 + percentage3;
+        let totalPercentage = (obtPercentage / totalMarks) * 100;
+        Math.floor(Math.round(totalPercentage));
+        let userTable = `
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total Marks</th>
+                    <th>Obt Marks</th>
+                    <th>Percentage</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${subjectOne}</td>
+                        <td>${marks}</td>
+                        <td>${obtSubjectOne}</td>
+                        <td>${percentage1}%</td>
+                    </tr>
+                    <tr>
+                        <td>${subjectSecond}</td>
+                        <td>${marks}</td>
+                        <td>${obtSubjectSecond}</td>
+                        <td>${percentage2}%</td>
+                    </tr>
+                    <tr>
+                        <td>${subjectThird}</td>
+                        <td>${marks}</td>
+                        <td>${obtSubjectThird}</td>
+                        <td>${percentage3}%</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">${totalMarks}</th>
+                        <th>${totalObtMarks}</th>
+                        <th>${totalPercentage}%</th>                        
+                    </tr>
+                    </tbody>
+            </table>
+            
+        `;
+        document.write(userTable);
+    </script>
+</body>
+
+</html>

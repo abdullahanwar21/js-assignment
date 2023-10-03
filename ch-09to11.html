@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-09 To 11</title>
+</head>
+
+<body>
+    <script>
+        //  Q-1
+        let city = prompt("ENter Your City Name ?");
+        if (city === "karachi") {
+            document.write("welcome to city of lights </br>");
+        }
+        // Q-2
+        let gender = prompt("ENter Your Gender ?");
+        if (gender === "male") {
+            document.write("Good Morning Sir </br>");
+        } else {
+            document.write("Good Morning Ma'am </br>");
+        }
+        //  Q-3
+        let signalColor = prompt("Enter Traffic Color");
+        if (signalColor === "red") {
+            document.write("Must Stop </br>");
+        }
+        else if (signalColor === "yellow") {
+            document.write("Ready to move </br>");
+        }
+        else if (signalColor === "green") {
+            document.write("Move now </br> ");
+        }
+
+        //  Q-4 
+        let feulLiter = +prompt("How much u have fuel in your car !");
+
+        if (feulLiter < 0.25) {
+            document.write(" Please refill the fuel in your car </br>");
+        } else {
+            document.write("Enjoy Your Journey </br>");
+        }
+
+        // Q-5
+
+        let totalMarks = 300;
+        let subjectOne = +prompt("ENter Your First Subject Marks");
+        let subjectTwo = +prompt("ENter Your Second Subject Marks");
+        let subjectThree = +prompt("ENter Your Third Subject Marks");
+        let obtMarks = subjectOne + subjectTwo + subjectThree;
+        let grade;
+        let reMarks;
+        let percentage = (obtMarks / totalMarks) * 100;
+        // Math.floor(percentage);
+        if (percentage >= 80) {
+            grade = "A-One grade";
+            reMarks = "Excellent";
+        } else if (percentage >= 70) {
+            grade = "A grade"
+            reMarks = "Good";
+            // document.write(grade);
+        } else if (percentage >= 60) {
+            grade = "B"
+            reMarks = "You Need To be Improved";
+        } else {
+            grade = "Fail"
+            reMarks = "Sorry";
+        }
+        document.write("<h2>Marks Sheet</h2>");
+
+        document.write(`Total Marks ${totalMarks} <br>`);
+        document.write(`Total Marks ${obtMarks} <br>`);
+        document.write(`Total Marks ${grade} <br>`);
+        document.write(`Remarks ${reMarks} <br>`);
+
+        // Q -6
+        let secretNumber = Math.floor(Math.random() * 10);
+        let userGuess = +prompt("Guess The Secret Number ");
+        if (secretNumber === userGuess) {
+            document.write(`<h3> Bingooo ! You Guess the Correct Number</h3>`)
+        } else if (secretNumber === userGuess + 1) {
+            document.write(`<h3> “Close enough to the correct answer”.</h3>`);
+        }
+        document.write("The Secret Number is", secretNumber , "\n");
+        // Q-7
+        let checkGivenNumber = +prompt("ENter Number Number Is divisible with 3 or Not");
+        if(  checkGivenNumber % 3 == 0 ){
+            document.write("Your Given Number IS Divisible With 3 <br>");
+        }else {
+            document.write("Your Given Number IS Not Divisible With 3 <br>");
+        }
+        // Q-8
+        let inputNumber = +prompt("Enter An odd or EVen Number ");
+        let reminder = inputNumber % 2;
+        if (reminder == 0) {
+            document.write("The Input Number Is Even <br>");
+        } else {
+            document.write("The Input Number Is Odd <br>");
+        }
+            //  Q-9
+            let temperature = +prompt("Enter Temperature ");
+            let message ;
+            if(temperature > 40){
+                message = "“It is too hot outside.”";
+            } 
+            else if (temperature > 30){
+                message = "The Weather today is Normal.";                
+            }
+            else if (temperature > 20){
+                message = "Today’s Weather is cool.";
+            }
+            else if (temperature > 10){
+                message = "OMG! Today’s weather is so Cool.";
+            } else {
+                message = "Please Enter Correct Temperature.";
+            }
+                document.write(`<h3>${message}</h3>`)
+    </script>
+
+</body>
+
+</html>

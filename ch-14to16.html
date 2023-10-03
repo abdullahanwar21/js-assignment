@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-14to16</title>
+</head>
+
+<body>
+    <script>
+        
+        let stuNames = ['Ali', 'Amsa', 'Atif'];
+        let stuMarks = [320, 230, 480];
+        let totalMarks = 500;
+        let percentage1 = (stuMarks[0] / totalMarks) * 100;
+        let percentage2 = (stuMarks[1] / totalMarks) * 100;
+        let percentage3 = (stuMarks[2] / totalMarks) * 100;
+        // document.write(percentage1);
+        document.write(`Score of ${stuNames[0]} is ${stuMarks[0]} Percentage  ${percentage1} % <br>`);
+        document.write(`Score of ${stuNames[1]} is ${stuMarks[1]} Percentage  ${percentage2} % <br>`);
+        document.write(`Score of ${stuNames[2]} is ${stuMarks[2]} Percentage  ${percentage3} % <br><br>`);
+        // Q-10
+
+        let scores = [320, 230, 480, 120]
+        document.write(`Scores of Students ${scores} <br>`);
+        scores.sort();
+        document.write(`Ordered Scores of Students ${scores} <br><br>`);
+        // Q-11
+        let cities = ['karachi', 'lahore', 'islamabad', 'quetta', 'peshawar'];
+        let selectedCities = [];
+        document.write(`Cities Lists: <br> ${cities} <br><br>`);
+        selectedCities = cities.slice(2, 4);
+        document.write(`Selected Cities Lists: <br> ${selectedCities} <br><br>`);
+
+        var arr = ['This ', ' is ', 'my ', ' cat'];
+        arr.join(this);
+        document.write(arr);
+    </script>
+
+</body>
+
+</html>
